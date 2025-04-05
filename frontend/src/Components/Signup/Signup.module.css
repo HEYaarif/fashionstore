@@ -1,0 +1,118 @@
+.signupcontainer {
+    /* border: 1px solid black; */
+    height: 580px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.subcontainer {
+    /* border: 1px solid red; */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
+    padding: 32px;
+}
+
+.subcontainer>form {
+    /* border: 1px solid green; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.subcontainer>form>input {
+    margin: 10px;
+    padding: 10px;
+    width: 360px;
+    border: 1px solid gray;
+    outline: none;
+    border-radius: 5px;
+}
+
+.subcontainer>form>input:focus {
+    border-color: #d89d00;
+}
+
+.subcontainer>form>button {
+    margin: 10px;
+    padding: 10px;
+    width: 360px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f8b400;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.subcontainer>form>button:hover {
+    background-color: #d89d00;
+}
+
+.subcontainer>form>p {
+    margin: 10px;
+    font-size: 12px;
+}
+
+.extracontent {
+    margin-top: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.extracontent>p>button {
+    border: none;
+    background-color: white;
+    color: #f8b400;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.extracontent>p>button:hover {
+    text-decoration: underline;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    margin: 10px 0;
+}
+
+.divider hr {
+    flex: 1;
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 0;
+}
+
+.divider span {
+    padding: 0 10px;
+    color: #888;
+    font-size: 14px;
+}
+
+.googleBtn {
+    /* border: 1px solid gray; */
+    border: none;
+    width: 360px;
+    padding: 8px;
+    background-color: white;
+    color: #f8b400;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.googleBtn:hover {
+    background-color: #f8f8f8;
+}

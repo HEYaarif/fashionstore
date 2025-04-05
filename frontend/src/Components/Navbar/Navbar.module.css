@@ -1,0 +1,86 @@
+.navContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    /* background: linear-gradient(to right, #00b09b, #96c93d); */
+    background-color: white;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.logo img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.searchBox {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 5px 10px;
+    border-radius: 8px;
+    width: 280px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.searchBox input {
+    border: none;
+    outline: none;
+    font-size: 14px;
+    padding: 5px;
+    flex-grow: 1;
+}
+
+.searchIcon {
+    color: gray;
+    margin-right: 8px;
+}
+
+.navLinks {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+}
+
+.navLinks li a {
+    text-decoration: none;
+    font-size: 18px;
+    color:black;
+    transition: 0.3s;
+}
+
+.navLinks li a:hover,
+.navLinks li a.active {
+    color: #ffdd57;
+}
+
+.cartIcon > a {
+    font-size: 28px;
+    color: black;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cartIcon a:hover,
+.cartIcon a.active {
+    color: #ffdd57;
+}
+
+.icon {
+    margin-right: 5px;
+}

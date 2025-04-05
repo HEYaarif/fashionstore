@@ -1,0 +1,49 @@
+.mainAccessoriecard{
+    /* border: 1px solid blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 15px;
+}
+.Accessoriecard{
+    /* border: 1px solid black; */
+    margin: 15px;
+    padding: 10px;
+    width: 95%;
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
+.Accessorie{
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    padding-left: 10px;
+    gap: 6px;
+}
+.Accessorie > p{
+    font-size: 16px;
+    line-height: 22px;
+   
+}
+.accessorieImage{
+    /* border: 1px solid blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+.accessorieImage > img{
+    width: 300px;
+    height: 300px;
+    margin: 8px;
+    border-radius: 6px;  
+}
+.accessorieImage > img:hover{
+    transform: rotate(6deg);
+}

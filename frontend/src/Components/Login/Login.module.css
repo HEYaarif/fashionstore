@@ -1,0 +1,90 @@
+.maincontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 350px;
+    text-align: center;
+}
+
+.details > input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid gray;
+    border-radius: 5px;
+    font-size: 16px;
+    /* outline: none; */
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #d89d00;
+}
+
+.loginBtn {
+    background:  #f8b400;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    padding: 12px;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.loginBtn:hover {
+    background:#d89d00;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: -8px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.extradetails {
+    margin-top: 15px;
+    text-align: center;
+}
+.forgot{
+    color:#f8b400;
+}
+.forgot > button{
+    background: none;
+    border: none;
+    color: #f8b400;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.forgot > button:hover {
+    text-decoration: underline;
+}
+.signupBtn {
+    background: none;
+    border: none;
+    color:#f8b400;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+.signupBtn:hover {
+    text-decoration: underline;
+}

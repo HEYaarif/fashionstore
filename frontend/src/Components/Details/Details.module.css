@@ -1,0 +1,142 @@
+.detailscontainer{
+    /* border: 1px solid black; */
+    margin: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.subcontainer{
+    /* border: 1px solid black; */
+    width: 95%;
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.leftcontainer{
+    /* border: 1px solid red; */
+    width: 630px;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.leftcontainer > img{
+    width: 360px;
+    height: 550px;
+    border-radius: 6px;
+}
+.subimage > img{
+    width: 180px;
+    height: 180px;
+    border-radius: 4px;
+    border-radius: 6px;
+    border: 2px solid #ddd;
+    cursor: pointer;
+    transition: border 0.3s ease-in-out;
+}
+.subimage > img:hover {
+    border-color: #f8b400;
+}
+
+.rigthcontainer{
+    /* border: 1px solid blue; */
+    width: 630px;
+    height: 550px;
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    
+}
+.rigthcontainer > p{
+    color: grey;
+}
+.rigthcontainer > h3{
+    color: black;
+}
+.rigthcontainer > button{
+    width: 420px;
+    height: 38px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: #f8b400;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition:0.3s ease-in-out, transform 0.2s;
+}
+.rigthcontainer > button:hover{
+    background: #d89d00;
+}
+.icons {
+    display: flex;
+    gap: 5px;
+}
+.icons > p{
+    color: grey;
+    font-size: 17px;
+    margin: 2px 0 0 9px;
+}
+
+.sizeContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 15px 0;
+}
+
+.sizeHeading {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.sizeOptions {
+    display: flex;
+    gap: 8px;
+}
+
+.sizeBox {
+    padding: 8px 15px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.sizeBox:hover {
+    border-color: #f8b400;
+    color: #f8b400;
+    transform: scale(1.05);
+}
+
+.sizeBox {
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+    margin-right: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .sizeBox:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .selectedSize {
+    background-color: #f8b400;
+    color: #fff;
+    border-color: #f8b400;
+  }
+  
+  .disabledBtn {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  

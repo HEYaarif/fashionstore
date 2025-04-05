@@ -1,0 +1,93 @@
+.mainProduct {
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    margin: 20px auto;
+    padding: 10px;
+    height: 70px;
+}
+
+.mainProduct > button {
+    /* border: 1px solid orange; */
+    width: 110px;
+    height: 40px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+.mainProduct > button:hover {
+    background-color: black;
+    color: white;
+}
+
+.ProductCard {
+    /* border: 1px solid blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 20px;
+}
+
+.imageCard {
+    /* border: 1px solid orange; */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 280px;
+    gap: 8px;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.imageCard:hover {
+    transform: scale(1.05);
+}
+
+.imageCard img {
+    /* border: 1px solid blue; */
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.imageCard p {
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.viewAll {
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+}
+
+.viewAll >  button {
+    /* border: 1px solid orange; */
+    width: 120px;
+    height: 40px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+.viewAll button:hover {
+    background-color: black;
+    color: white;
+}

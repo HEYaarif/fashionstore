@@ -1,0 +1,129 @@
+.maincontainer{
+    /* border: 1px solid black; */
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+   
+}
+
+.leftcontainer{
+    /* border: 1px solid red; */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 670px;
+    padding: 15px 0 15px 0;
+}
+.cardcontainer{
+    display: flex;
+    
+}
+.onlyimage{
+    /* border: 1px solid red; */
+    height: 200px; 
+    width: 200px;
+}
+.onlyimage > img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.contentcontainer{
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+.contentcontainer > h4{
+    color: grey;
+}
+.extradetails{
+    /* border: 1px solid red; */
+    margin-top: 7px;
+    padding-left: 34px;
+    display: flex;
+    text-align: center;
+    justify-content: flex-start;
+    gap: 12px;
+
+}
+.extradetails > button{
+    padding: 7px 12px;
+    font-size: 14px;
+    border-radius: 50%;
+    border: 1px solid gray;
+    background-color: white;
+    cursor: pointer;
+
+}
+.extradetails h3 {
+    border: 1px solid gray;
+    width: 42px;
+    height: 30px;
+    margin-top: 1px;
+}
+.extradetails p {
+    margin-top: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+.extradetails > p:hover{
+    color:#d89d00;
+}
+.btn > button{
+    width: 180px;
+    height: 35px;
+    cursor: pointer;
+    background:  #f8b400;
+    border: none;
+    color: white;
+    font-weight: bold;
+    margin-left: 440px;
+}
+.btn > button:hover{
+    background: #d89d00;
+}
+
+
+/* Price Calcaulation */
+.rightcontainer{
+    /* border: 1px solid blue; */
+    width: 360px;
+    height: 306px;
+    padding: 15px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    background: #fff;
+    
+}
+.rightcontainer > h3{
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: gray;
+}
+.rightcontainer > p{
+    display: flex;
+    justify-content: space-between;
+    padding: 6px;
+
+}
+.rightcontainer h4 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+    display: flex;
+    justify-content: space-between;
+}
+
+.rightcontainer span {
+    font-weight: bold;
+    color: #f8b400;
+}
+
+.rightcontainer hr {
+    border: none;
+    height: 1px;
+    background: #ddd;
+    margin: 10px 0;
+}

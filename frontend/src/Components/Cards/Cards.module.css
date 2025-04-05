@@ -1,0 +1,31 @@
+.cards {
+    width: 320px;
+    height: 460px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    text-align: center;
+    flex-direction: column;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.cards:hover {
+    /* transform: scale(1.05); */
+    transform: rotate(360deg);
+    transition: transform 0.5s ease-in-out;
+}
+.overlay h1 {
+    color: white;
+    font-size: 35px;
+    padding: 6px;
+}
+.overlay p {
+    color: white;
+    font-size: 20px;
+    padding-bottom: 15px;
+}
