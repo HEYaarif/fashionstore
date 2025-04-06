@@ -9,9 +9,9 @@ const cors = require("cors");
 const app = express()
 
 app.use(cors({
-  origin: "http://localhost:5173",
-  methods: "GET,POST,PUT,DELETE",
-  allowedHeaders: "Content-Type,Authorization"
+  origin: ["https://your-app-name.vercel.app"],  // replace with your actual Vercel frontend domain
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  allowedHeaders: ["Content-Type", "Authorization"]
 }));
 
 //& inbuilt middleware
