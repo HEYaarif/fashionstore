@@ -1,5 +1,5 @@
 import React from "react";
-import style from "../Accessorie/AccessorieCard.module.css";
+import style from "./AccessorieCard.module.css";
 
 const AccessorieCard = ({
   image2,

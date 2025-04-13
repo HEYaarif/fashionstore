@@ -16,9 +16,15 @@ let prodSchema = new Schema({
     password:{
         type: String,
         required:true
+    },
+    profile: {
+        type: String,
+        required: true,
+        enum: {
+            values: ["user", 'admin'],
+            message: "only user & admin allowed"
+        }
     }
 })
 
 module.exports = model("customers", prodSchema)
-
-// arrif 

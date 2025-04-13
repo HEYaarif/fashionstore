@@ -1,6 +1,6 @@
 .signupcontainer {
     /* border: 1px solid black; */
-    height: 580px;
+    height: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,7 +18,7 @@
     /* border: 1px solid green; */
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     flex-direction: column;
 
 }
@@ -115,4 +115,37 @@
 
 .googleBtn:hover {
     background-color: #f8f8f8;
+}
+.error {
+    color: red;
+    font-size: 0.8rem;
+    padding-left: 13px;
+    margin-top: -8px;
+}
+.profile {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile input,
+.profile select {
+    /* width: 100%; */
+    padding: 8px;
+    margin: 0px 9px 0px 9px;
+    font-size: 14px;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+    /* color: gray; */
+}
+
+.profile input:focus,
+.profile select:focus {
+    border-color:#d89d00;
+}
+.errorlast{
+    color: red;
+    font-size: 0.8rem;
+    padding-left: 13px;
+    margin-top: 2px;
 }

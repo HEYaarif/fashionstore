@@ -11,8 +11,6 @@ const Details = () => {
   const {addToCart} = useCart();
   const [product,setProduct] = useState(null)
   const [selectedSize, setSelectedSize] = useState("");
-  
-  
 
   useEffect(()=>{
     console.log(id);
@@ -72,7 +70,7 @@ const Details = () => {
                 </div>
               </div>
 
-              <button onClick={handleAddToCart} disabled={!selectedSize} className={!selectedSize ? style.disabledBtn:""}>Add to Cart</button>
+              <button onClick={handleAddToCart} className={!selectedSize ? style.disabledBtn:""}>Add to Cart</button>
 
 
               <button onClick={()=> navigate('/address')}>Buy Now</button>

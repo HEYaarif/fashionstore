@@ -1,0 +1,8 @@
+.ordercontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(58, 58, 184);
+    color: white;
+    margin-left: 250px;
+}
