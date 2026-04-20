@@ -18,7 +18,7 @@ const Address = () => {
     let address = async(e)=>{
         e.preventDefault()
         try {
-            let response = await axios.post("http://localhost:5000/api/prod/address", addData)
+            let response = await axios.post(`${process.env.REACT_APP_API_URL}/api/prod/address`, addData)
             addpopup(response.data.message)
             
         } catch (err) {

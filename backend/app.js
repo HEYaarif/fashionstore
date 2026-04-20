@@ -12,15 +12,16 @@ dns.setServers(["1.1.1.1","8.8.8.8"])
 //& Creating express app
 const app = express()
 
-// app.use(cors({
-//   origin: ["https://your-app-name.vercel.app"],  // replace with your actual Vercel frontend domain
-//   methods: ["GET", "POST", "PUT", "DELETE"],
-//   allowedHeaders: ["Content-Type", "Authorization"]
-// }));
-app.use(cors());
+app.use(cors({
+  origin: process.env.FRONTEND_URL || 'http://localhost:5137',  // replace with your actual Vercel frontend domain
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  allowedHeaders: ["Content-Type", "Authorization"]
+}));
+// app.use(cors());
 
 //& inbuilt middleware
 app.use(express.json())
+
 
 app.get('/test', (req, res) => {
   res.status(200).json({ message: "Test route is working!" });
