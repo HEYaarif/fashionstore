@@ -2,3 +2,154 @@ node_modules/
 .env
 dist/
 build/
+
+
+
+10
+Numpy, Pandas, and Matplotlib are not relevant for a MERN-focused role (they are for Data Science).
+
+Change the structure 
+Languages: JavaScript (ES6+), Python  
+Frontend: HTML5, CSS3, React.js, Redux Toolkit  
+Backend: Node.js, Express.js, REST APIs  
+Database: MongoDB, MySQL  
+Tools: Git, GitHub, NPM, NPX  
+
+Show latest career first : show full stack career on top
+
+Remover everything that is not related to MERN stack 
+
+Objective be like: Aspiring full-stack web developer with hands-on experience in MERN stack, seeking to contribute to innovative product development and grow within a dynamic tech team.
+
+No links (GitHub/Live URLs)?
+
+Certificates – Poorly Organized
+	•	Dates are random.
+	•	Mentioning platforms (like Udemy, Great Learning) is okay but don’t overdo it.
+
+Make it uniform, e.g.:
+	•	Full Stack Web Development, Ensono Research Pvt Ltd — Mar 2024
+	•	React Developer, Udemy — May 2023
+
+Add a GitHub and LinkedIn URL as clickable links (if in PDF).
+	•	Avoid “Jspiders” logo or institute names unless they are well-known.
+	•	Prefer “Professional Summary” over “Career Objective” in modern resumes.
+	•	Stick to 1-page unless you have 4+ years of experience.
+
+Rewrite career objective to be personal and impactful.
+	2.	Organize skills properly and remove irrelevant ones.
+	3.	Improve project descriptions with links and outcomes.
+	4.	Redesign resume layout using a clean, professional template.
+	5.	Make certifications and achievements more concrete and readable.
+
+
+
+
+
+<View style={styles.blueSectionArea}>
+          {/* NEW THIS WEEK */}
+          <View style={styles.sectionWrapper}>
+            <View style={styles.arrowBox}>
+              {arrow.week.left && (
+                <TouchableOpacity
+                  style={styles.arrowSingle}
+                  onPress={() => slideLeft(refWeek)}
+                >
+                  <Text style={styles.arrowText}>{"<"}</Text>
+                </TouchableOpacity>
+              )}
+              {arrow.week.right && (
+                <TouchableOpacity
+                  style={styles.arrowSingle}
+                  onPress={() => slideRight(refWeek)}
+                >
+                  <Text style={styles.arrowText}>{">"}</Text>
+                </TouchableOpacity>
+              )}
+            </View>
+
+            <Text style={styles.sectionTitle}>New This Week</Text>
+
+            <ScrollView
+              ref={refWeek}
+              horizontal
+              onScroll={(e) => handleScroll(e, "week", refWeek)}
+              showsHorizontalScrollIndicator={false}
+              contentContainerStyle={styles.sectionRow}
+            >
+             
+             {newWeek_arrayData.map((item, index) => (
+  <GradientImageGridImage
+    key={`week-${item.id || index}`}
+    uniqueKey={`week-${index}`}
+    activeCardIndex={activeCardIndex}
+    setActiveCardIndex={setActiveCardIndex}
+    videoUrl={item.videoUrl}
+    thumbnail={item.thumbnail}
+    title={item.title}
+    description={item.description}
+  />
+))}
+
+
+            </ScrollView>
+          </View>
+
+
+css
+
+sectionWrapper: { marginTop: 30, position: "relative" },
+
+  arrowBox: {
+    position: "absolute",
+    top: 0,
+    right: 15,
+    flexDirection: "row",
+    alignItems: "center",
+    zIndex: 10,
+  },
+  arrowSingle: {
+    paddingHorizontal: 12,
+    paddingVertical: 6,
+    backgroundColor: "#0d1628",
+    borderRadius: 6,
+  },
+  arrowText: { color: "#fff", fontSize: 19, fontWeight: "bold" },
+
+  sectionTitle: {
+    color: "#ff3fb6",
+    fontSize: 20,
+    fontWeight: "bold",
+    marginLeft: 20,
+    marginBottom: 10,
+  },
+sectionRow: { marginLeft: 20, paddingVertical: 10, gap: 15 },
+blueSectionArea: {
+    backgroundColor: "#0a1b8a",
+    marginTop: 20,
+    paddingTop: 25,
+    paddingBottom: 50,
+  },
+
+
+
+ newWeek_arrayData.map((item, index) => (
+          <GradientImageGridImage
+            key={`week-${item._id || index}`}
+            uniqueKey={`week-${index}`}
+            activeCardIndex={activeCardIndex}
+            setActiveCardIndex={setActiveCardIndex}
+            videoUrl={item.videoUrl}
+            thumbnail={item.thumbnail}
+            title={item.title}
+            description={item.description}
+          />
+        ))
+
+
+type:-  de94bba4-06d1-4d40-a16a-bfd50179d6ac
+
+attrib:- 0X8000000000000001
+
+
+

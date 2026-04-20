@@ -3,16 +3,21 @@ const prodRoutes = require('./routes/prod.routes')
 const connectToDB = require("./utils/dbconnect")
 require('dotenv').config()
 const cors = require("cors");
+const dns = require("dns")
+
+// Change DNS
+dns.setServers(["1.1.1.1","8.8.8.8"])
 
 
 //& Creating express app
 const app = express()
 
-app.use(cors({
-  origin: ["https://your-app-name.vercel.app"],  // replace with your actual Vercel frontend domain
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  allowedHeaders: ["Content-Type", "Authorization"]
-}));
+// app.use(cors({
+//   origin: ["https://your-app-name.vercel.app"],  // replace with your actual Vercel frontend domain
+//   methods: ["GET", "POST", "PUT", "DELETE"],
+//   allowedHeaders: ["Content-Type", "Authorization"]
+// }));
+app.use(cors());
 
 //& inbuilt middleware
 app.use(express.json())
