@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { CartProvider } from './Components/Context/Cartcontext.js';
+import { CartProvider } from './Components/Context/Cartcontext';
 import UserRoutes from "./Components/routes/UserRoutes";
 import AdminRoutes from "./Components/routes/AdminRoutes";
 
