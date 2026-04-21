@@ -19,7 +19,7 @@ const Signup = () => {
     console.log("Sending Data:", data)
 
     try {
-      let response = await axios.post(`${process.env.REACT_APP_API_URL}/api/prod/signup`, data)
+      let response = await axios.post(`${import.meta.env.VITE_API_URL}/api/prod/signup`, data)
       addpopup(response.data.message)
 
       setTimeout(()=>{
