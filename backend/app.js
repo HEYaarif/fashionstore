@@ -8,20 +8,23 @@ const dns = require("dns")
 // Change DNS
 dns.setServers(["1.1.1.1","8.8.8.8"])
 
-
 //& Creating express app
 const app = express()
 
 app.use(cors({
   origin: process.env.FRONTEND_URL || 'http://localhost:5137',  // replace with your actual Vercel frontend domain
-  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true,
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"]
 }));
+
+//Handle preflight requests
+app.options('*', cors())
+
 // app.use(cors());
 
 //& inbuilt middleware
 app.use(express.json())
-
 
 app.get('/test', (req, res) => {
   res.status(200).json({ message: "Test route is working!" });
@@ -30,18 +33,15 @@ app.get('/test', (req, res) => {
 //& routes
 app.use('/api/prod', prodRoutes);
 
-
 //& Page Not Found (404)
 // app.use("*", (req, res)=>{
 //   res.status(404).json({error:true, message:"Page Not Found"})
 // })
 
-
 //& server errors
 app.use((err, req, res, next) => {
   res.status(500).json({ error: true, message: err.message })
 })
-
 
 let startServer = async () => {
   try {
