@@ -98,7 +98,7 @@ app.get('/test', (req, res) => {
 app.use('/api/prod', prodRoutes);
 
 // ✅ 404 Handler
-app.use("*", (req, res) => {
+app.use((req, res) => {
   res.status(404).json({ error: true, message: "Page Not Found" })
 })
 
