@@ -34,7 +34,7 @@ const Login = () => {
 
         <div className={style.details}>
 
-          <input type="text" name="username" placeholder="Enter your Number or Email" {...register('username', {required:"Name or email is required"})}/>
+          <input type="text" name="username" placeholder="Enter your Number or Email" {...register('username', {required:"Number or email is required"})}/>
           {errors.username && <p className={style.error}>{errors.username.message}</p>}
 
           <input type="password" name='password' placeholder="Enter your Password" {...register("password",{required:"password is required"})} />

@@ -15,8 +15,8 @@
 }
 
 .cards:hover {
-    /* transform: scale(1.05); */
-    transform: rotate(360deg);
+    transform: scale(1.05);
+    /* transform: rotate(360deg); */
     transition: transform 0.5s ease-in-out;
 }
 .overlay h1 {
