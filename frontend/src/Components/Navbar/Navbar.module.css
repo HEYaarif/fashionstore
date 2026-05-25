@@ -19,6 +19,7 @@
     align-items: center;
     width: 100%;
     max-width: 1200px;
+    font-family: serif;
 }
 
 .logo img {
@@ -81,6 +82,9 @@
     color: #ffdd57;
 }
 
-.icon {
-    margin-right: 5px;
+.accountLink {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
 }

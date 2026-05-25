@@ -10,8 +10,9 @@ import watch2 from "../../assets/watch2.jpg"
 const Accessorie = () => {
   return (
   <>
-     <h1 style={{textAlign:"center", padding:"15px"}}>FEATURES PRODUCT</h1>
-        <p style={{textAlign:"center"}}>
+     {/* <h1 style={{textAlign:"center", padding:"15px"}}>FEATURES PRODUCT</h1> */}
+     <h1 className="text-center p-3.5 text-3xl font-bold font-serif">FEATURES PRODUCT</h1>
+        <p className='text-center'>
           ✨ Unleash luxury with our top-selling fragrance – long-lasting and
           crafted to perfection! 💖 Shop now and elevate your style with a scent
           that turns heads!

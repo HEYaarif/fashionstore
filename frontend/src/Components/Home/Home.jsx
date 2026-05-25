@@ -108,7 +108,7 @@ const Home = ({ searchTerm }) => {
 
           <Product />
 
-          <h1 style={{ textAlign: "center", padding: "15px" }}>
+          <h1 className="text-center p-3.5 text-3xl font-bold font-serif">
             FEATURES PRODUCT
           </h1>
           <p style={{ textAlign: "center" }}>

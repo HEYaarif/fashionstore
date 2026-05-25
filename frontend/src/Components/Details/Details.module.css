@@ -36,6 +36,7 @@
     border: 2px solid #ddd;
     cursor: pointer;
     transition: border 0.3s ease-in-out;
+    margin: 0px 22px 6px 0px;
 }
 .subimage > img:hover {
     border-color: #f8b400;
@@ -53,9 +54,6 @@
 }
 .rigthcontainer > p{
     color: grey;
-}
-.rigthcontainer > h3{
-    color: black;
 }
 .rigthcontainer > button{
     width: 420px;

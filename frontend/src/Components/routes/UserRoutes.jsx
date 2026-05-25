@@ -13,6 +13,7 @@ import Details from "../Details/Details";
 import Address from "../Address/Address";
 import Payment from "../Payment/Payment";
 import NotFound from "../NotFound/NotFound";
+import Account from '../../pages/Account/Account';
 
 const UserRoutes = ({ searchTerm, setSearchTerm }) => {
   return (
@@ -22,6 +23,7 @@ const UserRoutes = ({ searchTerm, setSearchTerm }) => {
         <Route path="/" element={<Home searchTerm={searchTerm} />} />
         <Route path="/product" element={<Product />} />
         <Route path="/accessorie" element={<Accessorie />} />
+        <Route path="/account" element={<Account/>}/>
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/cart" element={<Cart />} />

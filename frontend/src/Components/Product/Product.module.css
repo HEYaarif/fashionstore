@@ -10,10 +10,11 @@
 }
 
 .mainProduct > button {
-    /* border: 1px solid orange; */
+    border: 2px solid black;
     width: 110px;
     height: 40px;
     font-size: 16px;
+    font-weight: 400;
     border-radius: 10px;
     cursor: pointer;
     background-color: white;
@@ -77,10 +78,11 @@
 }
 
 .viewAll >  button {
-    /* border: 1px solid orange; */
+    border: 2px solid black;
     width: 120px;
     height: 40px;
     font-size: 16px;
+    font-weight: 400;
     border-radius: 10px;
     cursor: pointer;
     background-color: white;

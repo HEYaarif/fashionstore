@@ -48,9 +48,9 @@ const Details = () => {
      <div className={style.rigthcontainer}>
           {product ? (
             <>
-              <h1>{product.name}</h1>
+              <h1 className='font-bold text-2xl font-serif'>{product.name}</h1>
               <p>{product.description}</p>
-              <h3>{product.Price}</h3>
+              <h3 className='text-black text-1xl font-medium'>{product.Price}</h3>
               <div className={style.icons}>
                 <FaStar color="gold" size={20} />
                 <FaStar color="gold" size={20} />

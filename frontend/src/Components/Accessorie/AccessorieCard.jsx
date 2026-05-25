@@ -24,7 +24,7 @@ const AccessorieCard = ({
       <div className={style.mainAccessoriecard}>
         <div className={style.Accessoriecard}>
           <div className={style.Accessorie}>
-            <h2>{head}</h2>
+            <h2 className="text-center text-2xl font-bold font-serif">{head}</h2>
             <p>{paragraph}</p>
             <br />
             <ul>
@@ -47,7 +47,7 @@ const AccessorieCard = ({
           <img src={watch2} alt="watch" />
           </div>
           <div className={style.Accessorie}>
-            <h2>{head_b}</h2>
+            <h2 className="text-center text-2xl font-bold font-serif">{head_b}</h2>
             <p>{paragraph1}</p>
             <br />
             <ul>
