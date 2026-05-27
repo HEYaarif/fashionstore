@@ -34,7 +34,7 @@ app.get('/test', (req, res) => {
 });
 
 // ✅ Routes
-app.use('/api/prod', prodRoutes);
+app.use('/api/v1', prodRoutes);
 
 // ✅ 404 Handler
 app.use((req, res) => {
@@ -63,3 +63,6 @@ const startServer = async () => {
 }
 
 startServer()
+
+
+// http://localhost:5000/api/v1/account?email=mdaarif.dev@gmail.com

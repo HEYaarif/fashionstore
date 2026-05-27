@@ -38,7 +38,7 @@ let login = async (req, res, next) => {
             let isPassword = await compareEncryptedData(password, isCustomer.password)
 
             if (isPassword) {
-                return res.status(200).json({ error: false, message: "Login Successfully" })
+                return res.status(200).json({ error: false, message: "Login Successfully", data: {profile:isCustomer.profile, name:isCustomer.name, email:isCustomer.email} })
             }
             return res.status(401).json({ error: true, message: "Password Not Matching" })
         }
@@ -71,5 +71,25 @@ let address = async (req, res, next) => {
     }
 }
 
-module.exports = { signup, login, address }
+let getAccount = async (req, res, next) => {
+    try {
+        let { email, number } = req.query  // pass email or number as query param
+
+        let customer = await Customer.findOne(
+            { $or: [{ email }, { number }] },
+            { password: 0 }  // exclude password from response
+        )
+
+        if (!customer) {
+            return res.status(404).json({ error: true, message: "Customer Not Found", data: null })
+        }
+
+        return res.status(200).json({ error: false, message: "Account data fetched successfully", data: customer })
+
+    } catch (err) {
+        next(err)
+    }
+}
+
+module.exports = { signup, login, address, getAccount }
 
