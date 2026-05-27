@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import {MdDashboard, MdCategory, MdInventory, MdShoppingCart, MdLock, MdAttachMoney
+import {MdDashboard, MdCategory, MdInventory, MdShoppingCart, MdLock, MdAttachMoney, MdHome 
 } from "react-icons/md";
 import { FiSettings, FiUser } from "react-icons/fi";
 import styles from './SideBar.module.css';
@@ -10,6 +10,11 @@ const SideBar = () => {
     <aside className={styles.sidebar}>
       <h2 className={styles.logo}>🛒 FashionStore</h2>
       <ul className={styles.menu}>
+        <li>
+          <NavLink to="/" end className={({ isActive }) => isActive ? styles.active : ''}>
+            <MdHome  /> Home
+          </NavLink>
+        </li>
         <li>
           <NavLink to="/admin" end className={({ isActive }) => isActive ? styles.active : ''}>
             <MdDashboard /> Dashboard
@@ -53,11 +58,11 @@ const SideBar = () => {
             <FiUser /> Profile
           </NavLink>
         </li>
-        <li>
+        {/* <li>
           <NavLink to="/roles" className={({ isActive }) => isActive ? styles.active : ''}>
             Roles
           </NavLink>
-        </li>
+        </li> */}
       </ul>
     </aside>
   );

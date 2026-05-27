@@ -12,10 +12,13 @@ const Login = () => {
 
   let onSubmit = async (loginData) => {
     try {
-      let response = await axios.post(`${import.meta.env.VITE_API_URL}/api/prod/login`, loginData);
+      let response = await axios.post(`${import.meta.env.VITE_API_URL}/api/v1/login`, loginData);
+      console.log("Full Response:", response.data)
       addpopup(response.data.message);
+      localStorage.setItem('Username', loginData.username)  // save Username
+      localStorage.setItem('userRole', response.data.data.profile)  // save Role
       reset();
-      setTimeout(() => navigate("/"), 1000);
+      setTimeout(() => navigate("/account"), 1000);
     } catch (err) {
       console.log(err);
       addpopup(err.response?.data?.message || "Login failed");
