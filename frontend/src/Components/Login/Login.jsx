@@ -18,7 +18,7 @@ const Login = () => {
       localStorage.setItem('Username', loginData.username)  // save Username
       localStorage.setItem('userRole', response.data.data.profile)  // save Role
       reset();
-      setTimeout(() => navigate("/account"), 1000);
+      setTimeout(() => navigate("/"), 1000);
     } catch (err) {
       console.log(err);
       addpopup(err.response?.data?.message || "Login failed");
@@ -26,7 +26,7 @@ const Login = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen">
+    <div className="flex flex-col items-center justify-center h-150">
       <h1 className="text-[#333] text-3xl font-bold mb-4 font-serif">Login Now</h1>
 
       <ToastContainer autoClose={1000} />

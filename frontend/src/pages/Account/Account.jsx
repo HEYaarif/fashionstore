@@ -17,6 +17,7 @@ const Account = () => {
     localStorage.removeItem('token')
     localStorage.removeItem('Username')
     localStorage.removeItem('userRole')
+    localStorage.removeItem('cart')
 
     setTimeout(() => {
       window.location.href = '/login'
