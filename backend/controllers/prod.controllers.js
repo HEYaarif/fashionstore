@@ -94,13 +94,9 @@ let getAccount = async (req, res, next) => {
     }
 }
 
-
 // POST /api/v1/products
-
 const addProduct = async (req, res) => {
   try {
-     console.log('req.body:', req.body);   // ← add this
-     console.log('req.files:', req.files); // ← add this
     const {
       title, description, productCode,
       price, inStock, sizes, gender,
@@ -112,14 +108,14 @@ const addProduct = async (req, res) => {
       ? tags.split(',').map((t) => t.trim()).filter(Boolean)
       : [];
 
-    // ✅ Upload main image to Cloudinary
+    // Upload main image to Cloudinary
     let productImageUrl = null;
     if (req.files?.productImage?.[0]) {
       const uploaded = await uploadOnCloudinary(req.files.productImage[0].path);
       productImageUrl = uploaded?.secure_url || null;
     }
 
-    // ✅ Upload gallery images to Cloudinary
+    // Upload gallery images to Cloudinary
     let galleryUrls = [];
     if (req.files?.galleryImages?.length) {
       const uploads = await Promise.all(
@@ -141,8 +137,8 @@ const addProduct = async (req, res) => {
       category,
       tags:          parsedTags,
       status,
-      productImage:  productImageUrl,   // ✅ Cloudinary URL
-      galleryImages: galleryUrls,       // ✅ Cloudinary URLs
+      productImage:  productImageUrl,   
+      galleryImages: galleryUrls,     
     });
 
     res.status(201).json({

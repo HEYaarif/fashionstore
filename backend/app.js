@@ -2,7 +2,6 @@ require('dotenv').config()
 const express = require('express')
 const prodRoutes = require('./routes/prod.routes')
 const connectToDB = require("./utils/dbconnect")
-// require('dotenv').config()
 const cors = require("cors")
 const dns = require("dns")
 const path = require('path');

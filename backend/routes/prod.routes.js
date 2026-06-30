@@ -9,15 +9,13 @@ router.post('/login', login)
 router.post('/address', address)
 router.get('/account', getAccount)
 
-// new product routes
 router.post(
   '/products',
   upload.fields([
     { name: 'productImage',  maxCount: 1  },
-    { name: 'galleryImages', maxCount: 10 },
-  ]),
-  addProduct
-);
+    { name: 'galleryImages', maxCount: 5 },
+  ]), addProduct );
+
 router.get('/products', getProducts);
 
 module.exports = router
