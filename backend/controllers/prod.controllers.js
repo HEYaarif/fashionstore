@@ -2,6 +2,9 @@ const Customer = require('../models/prod.models')
 const Address = require('../models/add.model')
 const encrypData = require('../utils/encryData')
 const compareEncryptedData = require('../utils/compareEncdata')
+const Product = require('../models/Product.model');
+const upload = require('../middleware/upload');
+const { uploadOnCloudinary } = require('../utils/cloudinary.js')
 
 //* Signup data
 let signup = async (req, res, next) => {
@@ -91,5 +94,80 @@ let getAccount = async (req, res, next) => {
     }
 }
 
-module.exports = { signup, login, address, getAccount }
+
+// POST /api/v1/products
+
+const addProduct = async (req, res) => {
+  try {
+     console.log('req.body:', req.body);   // ← add this
+     console.log('req.files:', req.files); // ← add this
+    const {
+      title, description, productCode,
+      price, inStock, sizes, gender,
+      category, tags, status,
+    } = req.body;
+
+    const parsedSizes = sizes ? JSON.parse(sizes) : [];
+    const parsedTags  = tags
+      ? tags.split(',').map((t) => t.trim()).filter(Boolean)
+      : [];
+
+    // ✅ Upload main image to Cloudinary
+    let productImageUrl = null;
+    if (req.files?.productImage?.[0]) {
+      const uploaded = await uploadOnCloudinary(req.files.productImage[0].path);
+      productImageUrl = uploaded?.secure_url || null;
+    }
+
+    // ✅ Upload gallery images to Cloudinary
+    let galleryUrls = [];
+    if (req.files?.galleryImages?.length) {
+      const uploads = await Promise.all(
+        req.files.galleryImages.map((file) => uploadOnCloudinary(file.path))
+      );
+      galleryUrls = uploads
+        .filter(Boolean)
+        .map((res) => res.secure_url);
+    }
+
+    const product = await Product.create({
+      title,
+      description,
+      productCode,
+      price:         Number(price),
+      inStock:       inStock === 'true',
+      sizes:         parsedSizes,
+      gender,
+      category,
+      tags:          parsedTags,
+      status,
+      productImage:  productImageUrl,   // ✅ Cloudinary URL
+      galleryImages: galleryUrls,       // ✅ Cloudinary URLs
+    });
+
+    res.status(201).json({
+      success: true,
+      message: 'Product created successfully',
+      product,
+    });
+  } catch (error) {
+    if (error.code === 11000) {
+      return res.status(400).json({ success: false, message: 'Product code already exists' });
+    }
+    res.status(500).json({ success: false, message: error.message });
+  }
+};
+
+// GET /api/v1/products
+const getProducts = async (req, res) => {
+  try {
+    const products = await Product.find().sort({ createdAt: -1 });
+    res.status(200).json({ success: true, products });
+  } catch (error) {
+    res.status(500).json({ success: false, message: error.message });
+  }
+};
+
+
+module.exports = { signup, login, address, getAccount, addProduct, getProducts  }
 

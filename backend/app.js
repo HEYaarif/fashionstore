@@ -1,9 +1,11 @@
+require('dotenv').config()
 const express = require('express')
 const prodRoutes = require('./routes/prod.routes')
 const connectToDB = require("./utils/dbconnect")
-require('dotenv').config()
+// require('dotenv').config()
 const cors = require("cors")
 const dns = require("dns")
+const path = require('path');
 
 // Change DNS
 dns.setServers(["1.1.1.1","8.8.8.8"])
@@ -23,6 +25,7 @@ app.options('*', cors())
 
 // ✅ Inbuilt middleware
 app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
 
 // ✅ Test route
 app.get('/', (req, res) => {
@@ -35,6 +38,8 @@ app.get('/test', (req, res) => {
 
 // ✅ Routes
 app.use('/api/v1', prodRoutes);
+// ✅ Serve uploaded images
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // ✅ 404 Handler
 app.use((req, res) => {
