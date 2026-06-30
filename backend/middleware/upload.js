@@ -1,12 +1,9 @@
 const multer = require('multer');
 const path = require('path');
-const fs = require('fs');
-
-// Auto-create uploads folder if it doesn't exist
-if (!fs.existsSync('uploads')) fs.mkdirSync('uploads');
+const os = require('os');
 
 const storage = multer.diskStorage({
-  destination: (req, file, cb) => cb(null, 'uploads/'),
+  destination: (req, file, cb) => cb(null, os.tmpdir()), // /tmp is the only writable dir on Vercel
   filename: (req, file, cb) => {
     const unique = `${Date.now()}-${Math.round(Math.random() * 1e9)}`;
     cb(null, unique + path.extname(file.originalname));
@@ -22,7 +19,7 @@ const fileFilter = (req, file, cb) => {
 const upload = multer({
   storage,
   fileFilter,
-  limits: { fileSize: 5 * 1024 * 1024 }, // 5MB per file
+  limits: { fileSize: 5 * 1024 * 1024 },
 });
 
 module.exports = upload;

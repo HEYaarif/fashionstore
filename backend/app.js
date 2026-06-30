@@ -4,7 +4,6 @@ const prodRoutes = require('./routes/prod.routes')
 const connectToDB = require("./utils/dbconnect")
 const cors = require("cors")
 const dns = require("dns")
-const path = require('path');
 
 // Change DNS
 dns.setServers(["1.1.1.1","8.8.8.8"])
@@ -37,8 +36,6 @@ app.get('/test', (req, res) => {
 
 // ✅ Routes
 app.use('/api/v1', prodRoutes);
-// ✅ Serve uploaded images
-app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // ✅ 404 Handler
 app.use((req, res) => {
