@@ -14,12 +14,12 @@ const Signup = () => {
   const onSubmit = async (data) => {
     console.log("Sending Data:", data)
     try {
-      let response = await axios.post(`${import.meta.env.VITE_API_URL}/api/prod/signup`, data)
+      let response = await axios.post(`${import.meta.env.VITE_API_URL}/api/v1/signup`, data)
       addpopup(response.data.message)
 
       setTimeout(() => {
         if (data.profile === 'admin') {
-          navigate('/admin')
+          navigate('/login')
         } else {
           navigate('/login')
         }
